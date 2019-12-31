@@ -30,11 +30,13 @@ import com.arzio.deadessentials.module.fix.ModuleFixPlayersOnlineWhileServerIsSt
 import com.arzio.deadessentials.module.fix.ModuleFixPlotMeEntityInteraction;
 import com.arzio.deadessentials.module.fix.ModuleFixPvPOnWorldsWithoutPvP;
 import com.arzio.deadessentials.module.fix.ModuleTCPNoDelay;
+import com.arzio.deadessentials.service.ForgeBukkitEventManager;
 import com.arzio.deadessentials.service.ModuleManager;
 import com.arzio.deadessentials.service.ModuleManager.ToggleAction;
 import com.arzio.deadessentials.service.UpdateChecker;
 import com.arzio.deadessentials.service.UpdateChecker.CheckMethod;
 import com.arzio.deadessentials.service.impl.ArzioModuleManager;
+import com.arzio.deadessentials.service.impl.ForgeBukkitEventManagerImpl;
 import com.arzio.deadessentials.service.impl.GitHubUpdateChecker;
 import com.arzio.deadessentials.util.CauldronUtils;
 import com.arzio.deadessentials.util.reflection.ReflectionHelper;
@@ -55,6 +57,9 @@ public class DeadEssentials extends JavaPlugin {
 
 	private static DeadEssentials instance;
 	private ModuleManager moduleManager;
+	
+	// Forge-Bukkit compatible listener
+	private ForgeBukkitEventManager forgeBukkitEventManager;
 
 	// CD Wrappers
 	private ItemProvider itemProvider;
@@ -71,6 +76,7 @@ public class DeadEssentials extends JavaPlugin {
 				"https://github.com/Arzio/DeadEssentials/releases");
 
 		this.itemProvider = new ItemProviderImpl();
+		this.forgeBukkitEventManager = new ForgeBukkitEventManagerImpl(this);
 		
 		Bukkit.getPluginManager().registerEvents(new MiscListener(), this);
 
@@ -185,6 +191,10 @@ public class DeadEssentials extends JavaPlugin {
 		}
 
 		return (WorldGuardPlugin) plugin;
+	}
+
+	public ForgeBukkitEventManager getForgeBukkitEventManager() {
+		return forgeBukkitEventManager;
 	}
 
 	public ItemProvider getItemProvider() {

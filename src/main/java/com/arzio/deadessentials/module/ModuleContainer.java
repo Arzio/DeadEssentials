@@ -24,6 +24,7 @@ public class ModuleContainer {
 				throw new IllegalStateException("This module container does not contains a module yet!");
 			}
 			
+			this.getPlugin().getForgeBukkitEventManager().registerEvents(this.getPlugin(), this.getModule());
 			Bukkit.getPluginManager().registerEvents(this.getModule(), this.getPlugin());
 			
 			this.getModule().onEnable();
@@ -36,6 +37,7 @@ public class ModuleContainer {
 
 	public void onDisable() throws Throwable {
 		try {
+			this.getPlugin().getForgeBukkitEventManager().unregisterEvents(this.getModule());
 			HandlerList.unregisterAll(this.getModule());
 
 			module.onDisable();
