@@ -3,8 +3,8 @@ main: com.arzio.deadessentials.DeadEssentials
 version: {PROJECT_VERSION}
 author: Arzio
 load: STARTUP
-depend: [ProtocolLib, WorldGuard, WGCustomFlags]
-softdepend: [PlotMe, AuthMe, Essentials]
+depend: [WorldGuard, WGCustomFlags]
+softdepend: [PlotMe, AuthMe]
 description: Tools for your Crafting Dead server.
 commands:
     deadessentials:
