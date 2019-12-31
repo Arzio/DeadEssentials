@@ -53,7 +53,7 @@ public class ForgeBukkitEventManagerImpl implements ForgeBukkitEventManager, Lis
 							"Method " + m + " has @ForgeSubscribe annotation, but requires " + parameterTypes.length
 									+ " arguments.  Event handler methods must require a single argument.");
 				}
-				Class<?> eventType = null;
+				Class<?> eventType = parameterTypes[0];
 				
 				if (!Event.class.isAssignableFrom(eventType)) {
 					throw new IllegalArgumentException("Method " + m
