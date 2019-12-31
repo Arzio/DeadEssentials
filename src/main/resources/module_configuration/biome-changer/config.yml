@@ -1,0 +1,19 @@
+# This configuration is world-based.
+# To add a new world to the configuration, just copy the line and put the desired biome after the world name.
+#
+# Available biomes:
+#
+# 	"ZOMBIE_FOREST"
+# 	"ZOMBIE_DESERT"
+# 	"ZOMBIE_PLAINS"
+# 	"ZOMBIE_SNOW"
+# 	"ZOMBIE_WASTELAND"
+#
+# WARNING: YOU NEED TO WRITE EXACTLY AS ITS SHOWN ABOVE!
+# To reload the config file, try using the command from /DeadEssentials.
+
+worlds:
+  my_world1: "ZOMBIE_FOREST"
+  myworld2: "ZOMBIE_WASTELAND"
+  example: "ZOMBIE_DESERT"
+  delete_me: "ZOMBIE_PLAINS"

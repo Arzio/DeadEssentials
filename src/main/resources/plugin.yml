@@ -1,0 +1,18 @@
+name: DeadEssentials
+main: com.arzio.deadessentials.DeadEssentials
+version: {PROJECT_VERSION}
+author: Arzio
+load: STARTUP
+depend: [ProtocolLib, WorldGuard, WGCustomFlags]
+softdepend: [PlotMe, AuthMe, Essentials]
+description: Tools for your Crafting Dead server.
+commands:
+    deadessentials:
+        description: Main command for the plugin
+        usage: /deadessentials to check the comands
+    ping:
+        description: Command to check your ping
+        usage: /ping
+    nodelay:
+        description: Disables/Enables TCP NODELAY feature for you
+        usage: /nodelay
