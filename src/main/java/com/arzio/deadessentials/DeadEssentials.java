@@ -29,7 +29,6 @@ import com.arzio.deadessentials.module.fix.ModuleFixItemUsageOnRegions;
 import com.arzio.deadessentials.module.fix.ModuleFixPlayersOnlineWhileServerIsStopping;
 import com.arzio.deadessentials.module.fix.ModuleFixPlotMeEntityInteraction;
 import com.arzio.deadessentials.module.fix.ModuleFixPvPOnWorldsWithoutPvP;
-import com.arzio.deadessentials.module.fix.ModuleFixShutdownKickMessageColor;
 import com.arzio.deadessentials.module.fix.ModuleTCPNoDelay;
 import com.arzio.deadessentials.service.ModuleManager;
 import com.arzio.deadessentials.service.ModuleManager.ToggleAction;
@@ -104,7 +103,6 @@ public class DeadEssentials extends JavaPlugin {
 			this.moduleManager.registerModule(ModuleFixPlotMeEntityInteraction.class);
 		}
 		this.moduleManager.registerModule(ModuleFixPvPOnWorldsWithoutPvP.class);
-		this.moduleManager.registerModule(ModuleFixShutdownKickMessageColor.class);
 		this.moduleManager.registerModule(ModuleTCPNoDelay.class);
 
 		// Toggle them all!
