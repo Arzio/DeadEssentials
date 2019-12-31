@@ -1,5 +1,5 @@
 # DeadEssentials
-#### Provides fixes and addons for your 1.6.4 Crafting Dead server.
+#### Provides essential fixes and addons for your 1.6.4 Crafting Dead server.
 
 This plugin still needs more documentation, including a better README file.  
 If you want to help with it, you are welcome.
