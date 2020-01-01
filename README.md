@@ -1,7 +1,13 @@
 # DeadEssentials
 ### Provides essential features (fixes and addons) for your 1.6.4 Crafting Dead server.
 
-#### Dependencies:
+## Installation:
+
+1. Put all the dependencies below in your server's plugin folder.
+2. Download the latest plugin version at the [releases page](https://github.com/Arzio/DeadEssentials/releases).
+3. Put the downloaded .jar file in your server's plugin folder.
+
+### Dependencies:
 - [WorldGuard](https://media.forgecdn.net/files/739/931/worldedit-5.5.8.jar). Recommended version: 5.8
 - [WGCustomFlags](https://media.forgecdn.net/files/720/514/WorldGuard_Custom_Flags.zip). Recommended version: 1.6
  
