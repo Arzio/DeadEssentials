@@ -1,6 +1,6 @@
 # DeadEssentials
 **Provides essential features (fixes and addons) for your 1.6.4 Crafting Dead server.**  
-**By default, it enables all its fixes. For more information, check the [documentation](https://github.com/Arzio/DeadEssentials/#-dependencies)**
+**By default, it enables all its fixes. For more information, check the [documentation](https://github.com/Arzio/DeadEssentials/#-documentation)**
 
 ## 🔧 Installation:
 
