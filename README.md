@@ -1,6 +1,13 @@
 # DeadEssentials
-#### Provides essential features (fixes and addons) for your 1.6.4 Crafting Dead server.
+### Provides essential features (fixes and addons) for your 1.6.4 Crafting Dead server.
 
+#### Dependencies:
+- [WorldGuard](https://media.forgecdn.net/files/739/931/worldedit-5.5.8.jar). Recommended version: 5.8
+- [WGCustomFlags](https://media.forgecdn.net/files/720/514/WorldGuard_Custom_Flags.zip). Recommended version: 1.6
+ 
+Aditionally, WorldGuard 5.8 needs [WorldEdit 5.5.8](https://media.forgecdn.net/files/719/257/worldguard-5.8.jar).
+
+## Documentation
 This plugin still needs more documentation, including a better README file.  
 If you want to help with it, you are welcome.
 
