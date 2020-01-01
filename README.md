@@ -3,9 +3,9 @@
 
 ## 🔧 Installation:
 
-1. Put all the dependencies below in your server's plugin folder.
-2. Download the latest plugin version at the [releases page](https://github.com/Arzio/DeadEssentials/releases).
-3. Put the downloaded .jar file in your server's plugin folder.
+1. Download the latest DeadEssentials version at the [releases page](https://github.com/Arzio/DeadEssentials/releases).
+2. Put the downloaded .jar file in your server's plugin folder.
+3. Download and put [all the dependencies](https://github.com/Arzio/DeadEssentials#-dependencies) in your server's plugin folder.
 
 ### 📦 Dependencies:
 - [WorldGuard](https://media.forgecdn.net/files/719/257/worldguard-5.8.jar). Recommended version: 5.8
@@ -16,8 +16,6 @@ Aditionally, WorldGuard 5.8 needs [WorldEdit 5.5.8](https://media.forgecdn.net/f
 ## 📗 Documentation
 This plugin still needs more documentation, including a better README file.  
 If you want to help with it, you are welcome.
-
-Check for releases at the [releases page](https://github.com/Arzio/DeadEssentials/releases).
 
 ## 🔨 Building the project
 
