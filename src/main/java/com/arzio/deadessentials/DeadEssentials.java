@@ -23,7 +23,6 @@ import com.arzio.deadessentials.module.core.ModuleCoreWorldGuardRegionEvents;
 import com.arzio.deadessentials.module.fix.ModuleFixArmorBreaking;
 import com.arzio.deadessentials.module.fix.ModuleFixDamageSourceDetection;
 import com.arzio.deadessentials.module.fix.ModuleFixDeathDropsCompatibility;
-import com.arzio.deadessentials.module.fix.ModuleFixGunDamageOnServerFreeze;
 import com.arzio.deadessentials.module.fix.ModuleFixInvisibleEntities;
 import com.arzio.deadessentials.module.fix.ModuleFixItemUsageOnRegions;
 import com.arzio.deadessentials.module.fix.ModuleFixPlayersOnlineWhileServerIsStopping;
@@ -102,7 +101,6 @@ public class DeadEssentials extends JavaPlugin {
 		this.moduleManager.registerModule(ModuleFixArmorBreaking.class);
 		this.moduleManager.registerModule(ModuleFixDamageSourceDetection.class);
 		this.moduleManager.registerModule(ModuleFixDeathDropsCompatibility.class);
-		this.moduleManager.registerModule(ModuleFixGunDamageOnServerFreeze.class);
 		this.moduleManager.registerModule(ModuleFixInvisibleEntities.class);
 		this.moduleManager.registerModule(ModuleFixItemUsageOnRegions.class);
 		if (CauldronUtils.isPluginLoaded("PlotMe") && CauldronUtils.isPluginLoaded("AuthMe")) {
