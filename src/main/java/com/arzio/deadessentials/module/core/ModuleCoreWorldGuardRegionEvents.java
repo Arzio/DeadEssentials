@@ -75,12 +75,14 @@ public class ModuleCoreWorldGuardRegionEvents extends Module{
 		}
 
 		// Detecting __global__ region Enter event
-		futureRegions.add(globalTo);
-		if (!currentPlayerRegions.contains(globalTo)) {
-			currentPlayerRegions.add(globalTo);
-			
-			RegionBorderEvent enterEvent = new RegionBorderEvent(globalTo, CrossType.ENTER, player, locationFrom, locationTo);
-			Bukkit.getPluginManager().callEvent(enterEvent);
+		if (globalTo != null) {
+			futureRegions.add(globalTo);
+			if (!currentPlayerRegions.contains(globalTo)) {
+				currentPlayerRegions.add(globalTo);
+				
+				RegionBorderEvent enterEvent = new RegionBorderEvent(globalTo, CrossType.ENTER, player, locationFrom, locationTo);
+				Bukkit.getPluginManager().callEvent(enterEvent);
+			}
 		}
 		
 		// Detecting Leave event in non-global regions
@@ -97,11 +99,13 @@ public class ModuleCoreWorldGuardRegionEvents extends Module{
 		}
 
 		// Detecting __global__ region Leave event
-		if (!futureRegions.contains(globalFrom)) {
-			currentPlayerRegions.remove(globalFrom);
-			
-			RegionBorderEvent leaveEvent = new RegionBorderEvent(globalFrom, CrossType.LEAVE, player, locationFrom, locationTo);
-			Bukkit.getPluginManager().callEvent(leaveEvent);
+		if (globalFrom != null) {
+			if (!futureRegions.contains(globalFrom)) {
+				currentPlayerRegions.remove(globalFrom);
+				
+				RegionBorderEvent leaveEvent = new RegionBorderEvent(globalFrom, CrossType.LEAVE, player, locationFrom, locationTo);
+				Bukkit.getPluginManager().callEvent(leaveEvent);
+			}
 		}
 	}
 	
