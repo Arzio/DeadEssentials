@@ -15,8 +15,7 @@
 Aditionally, WorldGuard 5.8 needs [WorldEdit 5.5.8](https://media.forgecdn.net/files/739/931/worldedit-5.5.8.jar).
 
 ## 📗 Documentation
-This plugin still needs more documentation, including a better README file.  
-If you want to help with it, you are welcome.
+The wiki is under development and it is not done yet.
 
 ## 🔨 Building the project
 
