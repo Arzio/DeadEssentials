@@ -1,5 +1,5 @@
 # DeadEssentials
-**Provides essential features (fixes and addons) for your 1.6.4 Crafting Dead server.**  
+**Plugin for 1.6.4 Crafting Dead servers. Provides essential features (fixes and addons) as toggleable modules.**  
 **By default, the plugin enables all its fixes. For more information, check the [documentation](https://github.com/Arzio/DeadEssentials#-documentation)**
 
 ## 🔧 Installation:
