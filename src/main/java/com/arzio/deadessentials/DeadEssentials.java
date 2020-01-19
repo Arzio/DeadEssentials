@@ -17,6 +17,7 @@ import com.arzio.deadessentials.module.addon.ModuleAddonCustomGunsAndAmmos;
 import com.arzio.deadessentials.module.addon.ModuleAddonRestrictGMInventoryWithPermission;
 import com.arzio.deadessentials.module.addon.ModuleAddonSimpleClansFlags;
 import com.arzio.deadessentials.module.addon.ModuleAddonStepEmeraldHeal;
+import com.arzio.deadessentials.module.addon.ModuleAddonUpdateChecker;
 import com.arzio.deadessentials.module.addon.ModuleAddonZombieSpawnBlockBlacklist;
 import com.arzio.deadessentials.module.core.ModuleCoreWorldGuardRegionEvents;
 import com.arzio.deadessentials.module.fix.ModuleFixArmorBreaking;
@@ -78,6 +79,7 @@ public class DeadEssentials extends JavaPlugin {
 		this.moduleManager.registerModule(ModuleFixPlayersOnlineWhileServerIsStopping.class);
 		this.moduleManager.registerModule(ModuleAddonRestrictGMInventoryWithPermission.class);
 		this.moduleManager.registerModule(ModuleAddonStepEmeraldHeal.class);
+		this.moduleManager.registerModule(ModuleAddonUpdateChecker.class);
 		this.moduleManager.registerModule(ModuleAddonZombieSpawnBlockBlacklist.class);
 		if (CauldronUtils.isPluginLoaded("SimpleClans")) {
 			this.moduleManager.registerModule(ModuleAddonSimpleClansFlags.class);
