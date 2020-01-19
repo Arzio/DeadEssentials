@@ -6,7 +6,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.plugin.Plugin;
 
 import com.arzio.deadessentials.DeadEssentials;
-import com.arzio.deadessentials.listener.ForgeListener;
+import com.arzio.deadessentials.util.ForgeListener;
 import com.arzio.deadessentials.util.YMLFile;
 
 public abstract class Module implements Listener, ForgeListener {

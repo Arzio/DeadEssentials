@@ -2,7 +2,7 @@ package com.arzio.deadessentials.service;
 
 import java.util.Collection;
 
-import com.arzio.deadessentials.listener.ForgeListener;
+import com.arzio.deadessentials.util.ForgeListener;
 
 import org.bukkit.plugin.Plugin;
 

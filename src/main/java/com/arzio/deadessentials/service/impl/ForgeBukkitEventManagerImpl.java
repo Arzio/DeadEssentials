@@ -9,7 +9,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 
 import com.arzio.deadessentials.DeadEssentials;
-import com.arzio.deadessentials.listener.ForgeListener;
+import com.arzio.deadessentials.util.ForgeListener;
 import com.arzio.deadessentials.service.ForgeBukkitEventManager;
 
 import org.bukkit.event.EventHandler;
