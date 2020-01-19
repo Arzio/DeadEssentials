@@ -10,7 +10,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 import com.arzio.deadessentials.command.DeadEssentialsCommand;
 import com.arzio.deadessentials.command.NoDelayCommand;
 import com.arzio.deadessentials.command.PingCommand;
-import com.arzio.deadessentials.listener.MiscListener;
 import com.arzio.deadessentials.module.ModuleContainer;
 import com.arzio.deadessentials.module.addon.ModuleAddonBiomeChanger;
 import com.arzio.deadessentials.module.addon.ModuleAddonCustomFlags;
@@ -32,11 +31,8 @@ import com.arzio.deadessentials.module.fix.ModuleTCPNoDelay;
 import com.arzio.deadessentials.service.ForgeBukkitEventManager;
 import com.arzio.deadessentials.service.ModuleManager;
 import com.arzio.deadessentials.service.ModuleManager.ToggleAction;
-import com.arzio.deadessentials.service.UpdateChecker;
-import com.arzio.deadessentials.service.UpdateChecker.CheckMethod;
 import com.arzio.deadessentials.service.impl.ArzioModuleManager;
 import com.arzio.deadessentials.service.impl.ForgeBukkitEventManagerImpl;
-import com.arzio.deadessentials.service.impl.GitHubUpdateChecker;
 import com.arzio.deadessentials.util.CauldronUtils;
 import com.arzio.deadessentials.util.reflection.ReflectionHelper;
 import com.arzio.deadessentials.wrapper.item.ItemProvider;
@@ -51,8 +47,6 @@ public class DeadEssentials extends JavaPlugin {
 	public static final ModContainer MOD_CONTAINER = ReflectionHelper.getCraftingDeadModContainer();
 	public static final String MOD_ID = "craftingdead";
 	public static final String MOD_RESOURCE_NAME = MOD_ID+":";
-
-	private UpdateChecker updateChecker;
 
 	private static DeadEssentials instance;
 	private ModuleManager moduleManager;
@@ -71,13 +65,8 @@ public class DeadEssentials extends JavaPlugin {
 	public void onEnable() {
 		instance = this;
 
-		this.updateChecker = new GitHubUpdateChecker(this, "https://api.github.com/repos/Arzio/DeadEssentials/releases",
-				"https://github.com/Arzio/DeadEssentials/releases");
-
 		this.itemProvider = new ItemProviderImpl();
 		this.forgeBukkitEventManager = new ForgeBukkitEventManagerImpl(this);
-		
-		Bukkit.getPluginManager().registerEvents(new MiscListener(), this);
 
 		// Initialize the module manager
 		this.moduleManager = new ArzioModuleManager(this);
@@ -119,19 +108,6 @@ public class DeadEssentials extends JavaPlugin {
 		this.getLogger().info("Loading done! :3");
 		this.getLogger().info("This plugin was made by Arzio <3");
 		this.getLogger().info("Please, use '/deadessentials' to check all available commands");
-
-		// Checks for new updates using another thread
-		this.getUpdateChecker().checkUpdates(CheckMethod.ASYNC);
-
-		// Automatically checks for updates in a async way every 10 minutes
-		Bukkit.getScheduler().runTaskTimer(this, new Runnable() {
-
-			@Override
-			public void run() {
-				getUpdateChecker().checkUpdates(CheckMethod.ASYNC);
-			}
-
-		}, 600L * 20L, 600L * 20L); // Checks for update every 10 minutes
 		
 		// Warn about errored modules to some admins
 		Bukkit.getScheduler().runTaskTimer(this, new Runnable() {
@@ -201,10 +177,6 @@ public class DeadEssentials extends JavaPlugin {
 
 	public ModuleManager getModuleManager() {
 		return this.moduleManager;
-	}
-
-	public UpdateChecker getUpdateChecker() {
-		return this.updateChecker;
 	}
 
 	public static DeadEssentials getInstance() {
