@@ -1,6 +1,6 @@
 # DeadEssentials
 **Plugin for 1.6.4 Crafting Dead servers. Provides essential features (fixes and addons) as toggleable modules.**  
-**By default, the plugin enables all its fixes. For more information, check the [documentation](https://github.com/Arzio/DeadEssentials#-documentation)**
+**By default, the plugin enables all its fixes. I'm aware the documentation is still missing.
 
 ## 🔧 Installation:
 
